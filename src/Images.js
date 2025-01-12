@@ -4,7 +4,7 @@ const images = [
         img: `Capimages/1.png`
     },
     {
-        date: "2025-01-25",
+        date: "2025-01-12",
         img: `Capimages/2.png`
     },
     {
