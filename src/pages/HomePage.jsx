@@ -60,6 +60,13 @@ const Homepage = () => {
         return () => clearInterval(intervalId); 
     }, []);
 
+    const textColors= {
+        red: "text-red-600",
+        green: "text-green-600",
+        blue: "text-blue-600",
+        yellow: "text-yellow-600",
+    }
+
     return (
         <div>
             <Helmet>
@@ -104,12 +111,13 @@ const Homepage = () => {
                 )}
             </div>
 
+
             <div className=" flex flex-col items-start justify-start w-full p-4 lg:pl-2">
                 {podcasts.slice(0, 5).map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
-                    <p className={`${podcast.pbg} underline font-semibold w-full mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle}</p>
-                    <p className={`${podcast.pbg} w-full text-lg sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
+                    <p className={`${textColors[podcast.pbg]} underline font-semibold w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle}</p>
+                    <p className={`${textColors[podcast.pbg]} w-full text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
                     </div>
                 </div>
                 ))}
