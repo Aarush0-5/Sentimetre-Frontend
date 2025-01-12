@@ -37,6 +37,13 @@ const Podcast = () => {
         })
     },[])
 
+    const textColors= {
+        red: "text-red-600",
+        green: "text-green-600",
+        blue: "text-blue-600",
+        yellow: "text-yellow-600",
+    }
+
     return (
         <div>
             <Helmet>
@@ -67,10 +74,10 @@ const Podcast = () => {
                             className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
                             dangerouslySetInnerHTML={{ __html: selectedPodcast.purl }}
                             ></div>
-                            <h2 className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
+                            <h2 className={`border-2 border-black flex bg-brown-200 text-l ${textColors[podcast.pbg]} justify-center w-full mb-2`}>
                             {selectedPodcast.ptitle}
                             </h2>
-                            <p className="overflow-hidden overflow-wrap border-2 border-black flex bg-brown-200 text-l text-black justify-center p-4 w-full">
+                            <p className={`overflow-hidden overflow-wrap border-2 border-black flex bg-brown-200 text-l ${textColors[podcast.pbg]}  justify-center p-4 w-full`}>
                             {selectedPodcast.pdescription}
                             </p>
                         </div>
