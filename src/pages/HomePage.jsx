@@ -35,11 +35,11 @@ const Homepage = () => {
     useEffect(() => {
         const updateImage = () => {
             const today = new Date().toISOString().split('T')[0];
-            console.log("Today's date:", today); // Debugging
+            console.log("Today's date:", today); 
 
             let latestImage = null;
             for (const schedule of images) {
-                console.log("Checking date:", schedule.date); // Debugging
+                console.log("Checking date:", schedule.date); 
                 if (today >= schedule.date) {
                     latestImage = schedule.img;
                     console.log("Updated latestImage to:", latestImage); 
@@ -96,7 +96,7 @@ const Homepage = () => {
          {/*Podcast Container*/}
          <div className="grid grid-cols-1 lg:grid-cols-2 bg-beige p-4">
             <div className=" flex flex-col lg:items-start lg:justify-center items-start w-full  p-4">
-                <h1 className="text-4xl  sm:text-5xl md:text-6xl font-bold text-brown-400 mb-2 font-amatic">New Episodes</h1>
+                <h1 className="text-4xl  sm:text-5xl md:text-6xl font-bold text-brown-400 mb-2 font-amatic">Next Episode</h1>
                 {currentImage ? (
                 <img src={currentImage} alt="Scheduled Image" className="w-3/4 h-auto lg:w-full lg:h-auto mx-auto" />
                 ) : (
@@ -125,7 +125,7 @@ const Homepage = () => {
                     <a href="https://tiktok.com/@sentimetre3"  >
                     <img src="../../Tiktok.png" alt="Tiktok's logo"  />
                     </a>
-                    <a href="https://instagram.com/yourprofile"   >
+                    <a href="https://open.spotify.com/show/2I0Bxm0BB9EH5Q6DHCO7Of?si=f796f657daf7468e"   >
                     <img src="../../Spotify.png" alt="Spotify's logo"  />
                     </a>
                     <a href="https://www.youtube.com/@sentimetre3"  >

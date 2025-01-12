@@ -105,7 +105,7 @@ const Podcast = () => {
                     <a href="https://tiktok.com/@sentimetre3">
                     <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Tiktok.png" alt="Tiktok's logo" />
                     </a>
-                    <a href="https://instagram.com/yourprofile">
+                    <a href="https://open.spotify.com/show/2I0Bxm0BB9EH5Q6DHCO7Of?si=f796f657daf7468e">
                     <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Spotify.png" alt="Spotify's logo" />
                     </a>
                     <a href="https://www.youtube.com/@sentimetre3">

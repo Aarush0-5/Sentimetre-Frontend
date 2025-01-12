@@ -8,87 +8,87 @@ const images = [
         img: `Capimages/2.png`
     },
     {
-        date: "2025-02-08",
+        date: "2025-01-26",
         img: `Capimages/3.png`
     },
     {
-        date: "2025-02-22",
+        date: "2025-02-09",
         img: `Capimages/4.png`
     },
     {
-        date: "2025-03-22",
+        date: "2025-02-23",
         img: `Capimages/5.png`
     },
     {
-        date: "2025-04-05",
+        date: "2025-03-23",
         img: `Capimages/6.png`
     },
     {
-        date: "2025-04-19",
+        date: "2025-04-06",
         img: `Capimages/7.png`
     },
     {
-        date: "2025-05-03",
+        date: "2025-04-20",
         img: `Capimages/8.png`
     },
     {
-        date: "2025-05-17",
+        date: "2025-05-04",
         img: `Capimages/9.png`
     },
     {
-        date: "2025-05-31",
+        date: "2025-05-18",
         img: `Capimages/10.png`
     },
     {
-        date: "2025-06-14",
+        date: "2025-06-01",
         img: `Capimages/11.png`
     },
     {
-        date: "2025-06-28",
+        date: "2025-06-15",
         img: `Capimages/12.png`
     },
     {
-        date: "2025-07-12",
+        date: "2025-06-29",
         img: `Capimages/13.png`
     },
     {
-        date: "2025-07-26",
+        date: "2025-07-13",
         img: `Capimages/14.png`
     },
     {
-        date: "2025-08-09",
+        date: "2025-07-27",
         img: `Capimages/15.png`
     },
     {
-        date: "2025-08-23",
+        date: "2025-08-10",
         img: `Capimages/16.png`
     },
     {
-        date: "2025-09-20",
+        date: "2025-08-24",
         img: `Capimages/17.png`
     },
     {
-        date: "2025-10-04",
+        date: "2025-09-21",
         img: `Capimages/18.png`
     },
     {
-        date: "2025-10-18",
+        date: "2025-10-05",
         img: `Capimages/19.png`
     },
     {
-        date: "2025-11-01",
+        date: "2025-10-19",
         img: `Capimages/20.png`
     },
     {
-        date: "2025-11-15",
+        date: "2025-11-02",
         img: `Capimages/21.png`
     },
     {
-        date: "2025-11-19",
+        date: "2025-11-16",
         img: `Capimages/22.png`
     },
     {
-        date: "2025-12-19",
+        date: "2025-11-30",
         img: `Capimages/23.png`
     },
     {
