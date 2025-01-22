@@ -74,10 +74,10 @@ const Podcast = () => {
                             className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
                             dangerouslySetInnerHTML={{ __html: selectedPodcast.purl }}
                             ></div>
-                            <h2 className={`border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2`}>
+                            <h2 className={`border-2 border-black font-amatic flex bg-brown-200 text-l text-black justify-center w-full mb-2`}>
                             {selectedPodcast.ptitle}
                             </h2>
-                            <p className={`overflow-hidden overflow-wrap border-2 border-black flex bg-brown-200 text-l text-black  justify-center p-4 w-full`}>
+                            <p className={`overflow-hidden overflow-wrap font-amatic border-2 border-black flex bg-brown-200 text-l text-black  justify-center p-4 w-full`}>
                             {selectedPodcast.pdescription}
                             </p>
                         </div>
@@ -87,12 +87,12 @@ const Podcast = () => {
                         <div className="flex flex-col h-full">
                         <p
                             onClick={() => handleListen(podcast)}
-                            className={`flex text-2xl ${textColors[podcast.pbg]} w-full p-2 cursor-pointer font-bold underline`}
+                            className={`flex text-2xl ${textColors[podcast.pbg]} font-amatic w-full p-2 cursor-pointer font-bold underline`}
                         >
                             {podcast.ptitle}
                         </p>
                         <p
-                            className={`flex ${textColors[podcast.pbg]} w-full text-xl p-2`}
+                            className={`flex ${textColors[podcast.pbg]} font-amatic w-full text-xl p-2`}
                         >
                             {podcast.pdescription}
                         </p>
