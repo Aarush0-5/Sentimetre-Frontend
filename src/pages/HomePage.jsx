@@ -116,8 +116,8 @@ const Homepage = () => {
                 {podcasts.slice(0, 5).map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
-                    <Link to={"/podcast"} className={`${textColors[podcast.pbg]} underline font-semibold font-amatic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
-                    <p className={`${textColors[podcast.pbg]} w-full font-amatic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
+                    <Link to={"/podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-amatic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
+                    <p className={`${textColors[podcast.pbg]} w-full font-semibold font-amatic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
                     </div>
                 </div>
                 ))}
