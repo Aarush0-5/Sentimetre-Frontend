@@ -62,9 +62,13 @@ const Homepage = () => {
 
     const textColors= {
         red: "text-red-600",
-        green: "text-green-600",
-        blue: "text-blue-600",
+        green: "text-green-500",
+        darkgreen: "text-green-700",
+        blue: "text-blue-400",
+        darkblue: "text-blue-800",
         yellow: "text-yellow-600",
+        orange: "text-orange-500",
+        purple: "text-purple-500"
     }
 
     return (
