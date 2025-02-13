@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import {Helmet} from "react-helmet-async";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {format} from "date-fns";
 import images from "../Images.js";
-import classNames from "classnames";
 
 const Homepage = () => {
     const currentYear = new Date().getFullYear();
@@ -68,7 +66,8 @@ const Homepage = () => {
         darkblue: "text-blue-800",
         yellow: "text-yellow-600",
         orange: "text-orange-500",
-        purple: "text-purple-500"
+        purple: "text-purple-500",
+        special: "text-blue-950"
     }
 
     return (
@@ -81,8 +80,8 @@ const Homepage = () => {
 
        <header>
             <div className="flex flex-col-2 justify-evenly gap-14 lg:justify-end bg-[#685c50] p-4 text-3xl font-bold text-beige font-amatic">
-                <Link to={"/podcast"}>Drop Dates & Deeds</Link>
-                <Link to={"/about"}>Who We Be</Link>
+                <Link to={"/Podcast"}>Drop Dates & Deeds</Link>
+                <Link to={"/About"}>Who We Be</Link>
             </div>
        </header> 
 
@@ -120,7 +119,7 @@ const Homepage = () => {
                 {podcasts.slice(0, 5).map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
-                    <Link to={"/podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-amatic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
+                    <Link to={"/Podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-amatic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
                     <p className={`${textColors[podcast.pbg]} w-full font-semibold font-amatic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
                     </div>
                 </div>

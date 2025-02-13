@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async"; 
 import { useState, useEffect} from "react"; 
 import axios from "axios";
-import { format} from "date-fns";
 
 const Podcast = () => {
-    const currentYear = new Date().getFullYear();
+   
     const [error,setError] = useState(null);
     const [podcasts, setPodcasts] = useState([]);
     const [search, setSearch] = useState('')
@@ -45,7 +43,8 @@ const Podcast = () => {
         darkblue: "text-blue-800",
         yellow: "text-yellow-600",
         orange: "text-orange-500",
-        purple: "text-purple-500"
+        purple: "text-purple-500",
+        special: "text-blue-950"
     }
 
     return (

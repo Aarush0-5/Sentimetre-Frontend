@@ -15,8 +15,8 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<HomePage />}/> 
-      <Route path="/podcast" element={<Podcast />}/>  
-      <Route path="/about" element={<About />}/> 
+      <Route path="/Podcast" element={<Podcast />}/>  
+      <Route path="/About" element={<About />}/> 
       <Route path="/signup" element={<SignUp />}/> 
       <Route path="/login" element={<LogIn />}/> 
       <Route path="/upload" element={<PoBlCrud/>}/> 
