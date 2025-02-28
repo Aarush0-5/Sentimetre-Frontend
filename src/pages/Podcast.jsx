@@ -54,8 +54,8 @@ const Podcast = () => {
                 <meta name="description" content="Podcasts page" />
                 <meta name="keywords" content="Sentimeter, Podcasts, latest podcasts" />
             </Helmet>
-            <header className="flex flex-col lg:flex-row justify-evenly lg:justify-end bg-[#685c50] p-4 text-3xl font-bold text-beige font-amatic">
-             <h2 className="text-4xl lg:text-7xl whitespace-nowrap p-7 mt-[-10px] text-beige font-amatic font-extrabold">Drop, Dates, & Deets</h2>
+            <header className="flex flex-col lg:flex-row justify-evenly lg:justify-end bg-[#685c50] p-4 text-3xl font-bold text-beige font-comic">
+             <h2 className="text-4xl flex justify-center lg:text-7xl whitespace-nowrap p-7 mt-[-10px] text-beige font-comic font-extrabold">Drop, Dates, & Deets</h2>
             </header> 
 
             <main className="min-h-screen bg-beige flex flex-col lg:flex-row w-full">
@@ -90,12 +90,12 @@ const Podcast = () => {
                         <div className="flex flex-col h-full">
                         <p
                             onClick={() => handleListen(podcast)}
-                            className={`flex text-2xl ${textColors[podcast.pbg]} font-amatic w-full p-2 cursor-pointer font-bold underline`}
+                            className={`flex text-2xl ${textColors[podcast.pbg]} font-comic w-full p-2 cursor-pointer font-bold underline`}
                         >
                             {podcast.ptitle}
                         </p>
                         <p
-                            className={`flex ${textColors[podcast.pbg]} font-semibold font-amatic w-full text-xl p-2`}
+                            className={`flex ${textColors[podcast.pbg]} font-semibold font-comic w-full text-xl p-2`}
                         >
                             {podcast.pdescription}
                         </p>
@@ -107,25 +107,28 @@ const Podcast = () => {
              </div>
             </main>
 
-            <footer className="bg-beige p-10">
-                <div className="flex flex-row space-x-10 lg:space-x-4 lg:w-1/6">
-                    <a href="https://www.instagram.com/sentimetre3/">
-                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Instagram.png" alt="Instagram's logo" />
+            <footer className="bg-beige p-10" >
+             <div className="flex space-x-7 md:space-x-7 lg:flex lg:flex-row lg:items-end lg:w-1/4 lg:space-x-4 ">
+                 <a href="https://www.instagram.com/sentimetre3/"  >
+                 <img  className="w-6 h-6 lg:w-10 lg:h-10" src="../../Instagram.png" alt="insta's logo"  />
+                 </a>
+                    <a href="https://tiktok.com/@sentimetre3"  >
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Tiktok.png" alt="Tiktok's logo"  />
                     </a>
-                    <a href="https://tiktok.com/@sentimetre3">
-                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Tiktok.png" alt="Tiktok's logo" />
+                    <a href="https://open.spotify.com/show/2I0Bxm0BB9EH5Q6DHCO7Of?si=f796f657daf7468e"   >
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Spotify.png" alt="Spotify's logo"  />
                     </a>
-                    <a href="https://open.spotify.com/show/2I0Bxm0BB9EH5Q6DHCO7Of?si=f796f657daf7468e">
-                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Spotify.png" alt="Spotify's logo" />
+                    <a href="https://www.youtube.com/@sentimetre3"  >
+                    <img  className="w-6 h-6 lg:w-10 lg:h-10"src="../../Youtube.png" alt="Youtube logo"  />
                     </a>
-                    <a href="https://www.youtube.com/@sentimetre3">
-                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Youtube.png" alt="Youtube logo" />
+                    <a href="https://x.com/sentimetre3"  >
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../X.png" alt="X logo"  />
                     </a>
-                    <a href="https://x.com/sentimetre3">
-                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../X.png" alt="X logo" />
+                    <a href="https://podcasts.apple.com/us/podcast/sentimetre/id1795190598"  >
+                    <img src="../../applepodcast.png" className="w-6 h-6 lg:w-10 lg:h-10" alt="apple podcast logo"  />
                     </a>
-                </div>
-            </footer>
+            </div>
+         </footer>
 
 
         </div>

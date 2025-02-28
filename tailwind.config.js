@@ -24,6 +24,8 @@ export default {
       fontFamily: {
         serif: ['Times New Roman, serif'],
         amatic: ['"Amatic SC"', 'cursive'],
+        banger: ['"Bangers"', 'cursive'],
+        comic: ['Coming Soon', 'cursive']
       },
     },
   },

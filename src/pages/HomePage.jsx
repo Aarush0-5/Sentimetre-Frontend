@@ -79,8 +79,8 @@ const Homepage = () => {
             </Helmet>
 
        <header>
-            <div className="flex flex-col-2 justify-evenly gap-14 lg:justify-end bg-[#685c50] p-4 text-3xl font-bold text-beige font-amatic">
-                <Link to={"/Podcast"}>Drop Dates & Deeds</Link>
+            <div className="flex flex-col-2 justify-evenly gap-14 lg:justify-end bg-[#685c50] p-4 text-lg lg:text-3xl font-comic font-bold text-beige ">
+                <Link to={"/Podcast"}>Drop Dates & Deets</Link>
                 <Link to={"/About"}>Who We Be</Link>
             </div>
        </header> 
@@ -92,9 +92,9 @@ const Homepage = () => {
           <div className="bg-[#b39b82] flex items-center justify-center">
                 <img src="../../NewLogoMain-modified.png" alt="The image" className="w-2/3 p-4 h-auto lg:mt-[-200px]" />
           </div>           
-          <div className="bg-[#F5F5DC] p-5 font-amatic">
-            <p className="text-center mb-8 font-bold text-brown-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">All Things Emotions</p>
-            <p className="text-center mx-4 sm:mx-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brown-400 font-semibold">
+          <div className="bg-[#F5F5DC] p-5 font-comic">
+            <p className="text-center mb-8 font-bold text-brown-400 text-3xl md:text-6xl lg:text-6xl  p-4">All Things Emotions</p>
+            <p className="text-center mx-4 sm:mx-8 text-xl md:text-4xl lg:text-4xl text-brown-400 font-semibold">
             We're not here to sugarcoat—this is the podcast where emotions get real, and we get loud about it. Let's face it, life's a rollercoaster of feelings we sometimes pretend don't exist. No fluff, just real talk. From "I'm fine" lies to happy highs, we're breaking down the feels, the why's and the oh-my-god-is-it-just-me's. Tune in as we dive into the good, the bad, and the downright messy parts of mental health and all the moods in between. Perfect for anyone vibing with the ups and downs or just wanting to feel seen.
             </p>
           </div>
@@ -106,11 +106,11 @@ const Homepage = () => {
          {/*Podcast Container*/}
          <div className="grid grid-cols-1 lg:grid-cols-2 bg-beige p-4">
             <div className=" flex flex-col lg:items-start lg:justify-center items-start w-full  p-4">
-                <h1 className="text-4xl  sm:text-5xl md:text-6xl font-bold text-brown-400 mb-2 font-amatic">Next Episode</h1>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-brown-400 mb-2 font-comic">Next Episode</h1>
                 {currentImage ? (
                 <img src={currentImage} alt="Scheduled Image" className="w-3/4 h-auto lg:w-full lg:h-auto mx-auto" />
                 ) : (
-                <p className="font-amatic text-left text-brown-500 text-2xl sm:text-3xl md:text-4xl font-bold">Episode coming soon!</p>
+                <p className="font-comic text-left text-brown-500 text-2xl sm:text-3xl md:text-4xl font-bold">Episode coming soon!</p>
                 )}
             </div>
 
@@ -119,8 +119,8 @@ const Homepage = () => {
                 {podcasts.slice(0, 5).map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
-                    <Link to={"/Podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-amatic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
-                    <p className={`${textColors[podcast.pbg]} w-full font-semibold font-amatic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
+                    <Link to={"/Podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-comic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
+                    <p className={`${textColors[podcast.pbg]} w-full font-semibold font-comic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
                     </div>
                 </div>
                 ))}
@@ -129,21 +129,24 @@ const Homepage = () => {
         </main>
 
          <footer className="bg-beige p-10" >
-             <div className="flex space-x-7 lg:flex lg:flex-row lg:items-end lg:w-1/5 lg:space-x-4 ">
+             <div className="flex space-x-7 md:space-x-7 lg:flex lg:flex-row lg:items-end lg:w-1/4 lg:space-x-4 ">
                  <a href="https://www.instagram.com/sentimetre3/"  >
-                 <img src="../../Instagram.png" alt="insta's logo"  />
+                 <img  className="w-6 h-6 lg:w-10 lg:h-10" src="../../Instagram.png" alt="insta's logo"  />
                  </a>
                     <a href="https://tiktok.com/@sentimetre3"  >
-                    <img src="../../Tiktok.png" alt="Tiktok's logo"  />
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Tiktok.png" alt="Tiktok's logo"  />
                     </a>
                     <a href="https://open.spotify.com/show/2I0Bxm0BB9EH5Q6DHCO7Of?si=f796f657daf7468e"   >
-                    <img src="../../Spotify.png" alt="Spotify's logo"  />
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../Spotify.png" alt="Spotify's logo"  />
                     </a>
                     <a href="https://www.youtube.com/@sentimetre3"  >
-                    <img src="../../Youtube.png" alt="Youtube logo"  />
+                    <img  className="w-6 h-6 lg:w-10 lg:h-10"src="../../Youtube.png" alt="Youtube logo"  />
                     </a>
                     <a href="https://x.com/sentimetre3"  >
-                    <img src="../../X.png" alt="X logo"  />
+                    <img className="w-6 h-6 lg:w-10 lg:h-10" src="../../X.png" alt="X logo"  />
+                    </a>
+                    <a href="https://podcasts.apple.com/us/podcast/sentimetre/id1795190598"  >
+                    <img src="../../applepodcast.png" className="w-6 h-6 lg:w-10 lg:h-10" alt="apple podcast logo"  />
                     </a>
             </div>
          </footer>
