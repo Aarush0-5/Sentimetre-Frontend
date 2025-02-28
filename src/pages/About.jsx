@@ -17,19 +17,24 @@ const About = () => {
 
             <main>
               <div className="bg-[#F5F5DC]">
-                <img src="../../NewLogo.png" alt="" className="w-full mx-auto lg:ml-[-30px]" />
+                <img src="../../aboutimg.png" alt="" className="w-full mx-auto lg:ml-[-30px]" />
               </div>
               <div className="bg-[#F5F5DC] p-2 text-center lg:w-full lg:h-auto text-brown-500 lg:p-[120px] font-semibold font-comic ">
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Sup homies, welcome to Sentimetre, where we dive deep into all things emotions. </p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Yeah, our colour palette and themes might look gay, but we’re serious when we say we’re not.</p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">If you’re gay though, good for you!</p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Every emotion we feel gets its own unique color because the world ain't just a black and white movie.</p>
-                <p className="lg:text-4xl font-bold text-xl sm:text-2xl md:text-3xl">Now, let’s meet the team!</p>
-                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Starting with Mahira, the backbone of Sentimetre. She started this whole thing from scratch, loves her independence, and minds her own business. She’s bossy but also hyperactive.</p>
-                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Next up is Shalani, the curly-haired freak. She’s everything you wish to be.</p>
-                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Then there's Bomal, who can’t keep his thumbs away from the record button. Slide into his DMs, and you’ll get flooded with voice messages.</p>
-                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Moving on to Savini, Mahira’s pookie. “She’s mine, back off,” Mahira growls. If you wanna see tomorrow, better stay away from Savini. </p>
-                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Finally, we have Sara, the diva and the yappaholic. She’ll never fail to make you giggle. But she’s also a dumb brunette, you know, like those Americans (no offence if you’re American).</p>
+                <p className="lg:text-4xl font-bold text-xl sm:text-2xl md:text-3xl">✨ Meet the Yappaholics ✨</p>
+                <p className="lg:text-4xl font-bold text-xl sm:text-2xl md:text-3xl">1. Mahira – “She.E.O of Yap Management”</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">✨ Queen Energy? Yeah, she invented it. With a crown on her head and stars in her aura, Mahira is the boss babe who keeps the yap squad in check. Whether she’s running the show or casually breaking glass ceilings, she does it all with that main character energy. If chaos is a ladder, she’s already at the top wearing an evil smug.</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Shalani – “The Profesh Yappaholic</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">💄💎 Polished, professional, but still ready to yap. Shalani’s got the poise of a TED Talk speaker and the charm of your favorite rom-com lead. She’s the one delivering hot takes with a side of elegance—and if there’s drama, she’ll sip the tea but keep it classy. Basically, if LinkedIn had a fun mode, she’d be the face of it.</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Sara – “The Unstoppable Yappinator”</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">💖🎀 Cute but chaotic? Say less. Sara’s serving Hello Kitty realness with a sprinkle of heart emojis and a dash of ‘I’m-not-done-talking-yet’ energy. If you think you can out-yap her, good luck—this girl’s got verbal stamina and the vibes to match. Unstoppable? More like un-shush-able.</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Bomal – “The Unfiltered Mic”</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">🤯💢 One joke away from getting canceled. Bomal’s got the kind of humor that keeps things interesting—and occasionally risky. If there’s a boundary, he’s toeing it (with a smirk). He’s not here for mainstream nonsense, but if you need someone to roast the group and the system, he’s your guy. Proceed with caution.</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Savini – “Chief Hug Officer”</p>
+                <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">🎭🤗 Equal parts hugger and vibe inspector. Savini’s the friend who’ll make sure you feel welcome—but if the energy’s weird, she’s already clocked it. She’s got that low-key theatre kid energy, always ready to bring life to the party while keeping the vibes in check. Pass the vibe check? Cool. If not, better luck next time.</p>
               </div>
             </main>
 
