@@ -116,13 +116,13 @@ const Podcast = () => {
                         </button>
                         <h2 className="text-center text-xl lg:text-2xl mb-5 font-semibold underline">Choose Your Favourite Platform!</h2>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
-                            <button onClick={() => handlePlatform(platformdata["applepodcast"])}>Apple Podcast</button>
+                            <button onClick={() => handlePlatform(platformdata["applepodcast"])}>Apple Podcasts</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
                             <button onClick={() => handlePlatform(platformdata["spotify"])}>Spotify Podcasts</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
-                            <button onClick={() => handlePlatform(platformdata["youtube"])}>Youtube</button>
+                            <button onClick={() => handlePlatform(platformdata["youtube"])}>YouTube</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
                             dangerouslySetInnerHTML={{ __html: selectedPlatform }}>
