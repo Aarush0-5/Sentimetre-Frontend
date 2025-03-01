@@ -23,7 +23,7 @@ const Podcast = () => {
     }
    
    
-    const filteredPodcasts = podcasts.filter((podcast) =>  podcast.ptitle.toLowerCase().includes(search.toLowerCase()) || podcast.pdescription.toLowerCase().includes(search.toLowerCase()))
+    const filteredPodcasts = podcasts.filter((podcast) =>  podcast.title.toLowerCase().includes(search.toLowerCase()) || podcast.description.toLowerCase().includes(search.toLowerCase()))
 
     useEffect(() => {
         axios.get("https://sentimetre-backend.onrender.com/auth/podcast")
@@ -89,7 +89,7 @@ const Podcast = () => {
                     <>
                     {selectedPodcast && (
                         <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center h-full w-full">
-                        <div className={` ${backgroundColors[podcast.pbg]} p-5 rounded-lg max-w-lg w-full text-left`}>
+                        <div className={` ${backgroundColors[podcast.bg]} p-5 rounded-lg max-w-lg w-full text-left`}>
                             <button
                             onClick={handleCloseModal}
                             className="mb-5 bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 hover:text-black cursor-pointer"
@@ -119,14 +119,14 @@ const Podcast = () => {
                         <div className="flex flex-col h-full transition-transform duration-300 ease-in-out transform">
                         <p
                             onClick={() => handleListen(podcast)}
-                            className={`flex text-2xl ${textColors[podcast.pbg]} font-comic w-full p-2 cursor-pointer font-bold underline`}
+                            className={`flex text-2xl ${textColors[podcast.bg]} font-comic w-full p-2 cursor-pointer font-bold underline`}
                         >
-                            {podcast.ptitle}
+                            {podcast.title}
                         </p>
                         <p
-                            className={`flex ${textColors[podcast.pbg]} font-semibold font-comic w-full text-xl p-2`}
+                            className={`flex ${textColors[podcast.bg]} font-semibold font-comic w-full text-xl p-2`}
                         >
-                            {podcast.pdescription}
+                            {podcast.description}
                         </p>
                         </div>
                     </div>

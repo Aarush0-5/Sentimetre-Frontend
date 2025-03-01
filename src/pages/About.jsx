@@ -24,7 +24,7 @@ const About = () => {
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Yeah, our colour palette and themes might look gay, but we’re serious when we say we’re not.</p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">If you’re gay though, good for you!</p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">Every emotion we feel gets its own unique color because the world ain't just a black and white movie.</p>
-                <p className="lg:text-5xl font-bold text-xl sm:text-2xl md:text-3xl">✨ Meet the Yappaholics ✨</p>
+                <p className="lg:text-5xl mb-10 font-bold text-xl sm:text-2xl md:text-3xl">✨ Meet the Yappaholics ✨</p>
                 <p className="lg:text-4xl mb-5 text-xl sm:text-2xl md:text-3xl"> Mahira – “She.E.O of Yap Management”</p>
                 <p className="lg:text-4xl mb-10 text-xl sm:text-2xl md:text-3xl">✨ Queen Energy? Yeah, she invented it. With a crown on her head and stars in her aura, Mahira is the boss babe who keeps the yap squad in check. Whether she’s running the show or casually breaking glass ceilings, she does it all with that main character energy. If chaos is a ladder, she’s already at the top wearing an evil smug.</p>
                 <p className="lg:text-4xl mb-5 text-xl sm:text-2xl md:text-3xl">Shalani – “The Profesh Yappaholic</p>
