@@ -3,11 +3,11 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 
 const Podcast = () => {
-   
     const [error,setError] = useState(null);
     const [podcasts, setPodcasts] = useState([]);
     const [search, setSearch] = useState('')
     const [selectedPodcast, setSelectedPodcast] = useState(null);
+    const [selectedPlatform, setSelectedPlatform] = useState(null);
      
 
     const handleListen = (podcast) => {
@@ -17,6 +17,10 @@ const Podcast = () => {
      const handleCloseModal = () => {
           setSelectedPodcast(null);
         };
+
+    const handlePlatform =(platform) => {
+        setSelectedPlatform(platform)
+    }
    
    
     const filteredPodcasts = podcasts.filter((podcast) =>  podcast.ptitle.toLowerCase().includes(search.toLowerCase()) || podcast.pdescription.toLowerCase().includes(search.toLowerCase()))
@@ -26,6 +30,13 @@ const Podcast = () => {
         .then(response => {
             if (response.data && Array.isArray(response.data.data)) {
                 setPodcasts(response.data.data);
+                platformData = 
+                    {
+                        "youtube": `${response.data.data.urly}`,
+                        "spotify": `${response.data.data.urls}`,
+                        "applepodcast": `${response.data.data.urla}`,
+                    }
+                console.log(platformData)
             } else {
                 setError("Unexpected data format.");
             }
@@ -47,6 +58,18 @@ const Podcast = () => {
         special: "text-blue-950"
     }
 
+    const backgroundColors= {
+        red: "bg-red-600",
+        green: "bg-green-500",
+        darkgreen: "bg-green-700",
+        blue: "bg-blue-400",
+        darkblue: "bg-blue-800",
+        yellow: "bg-yellow-600",
+        orange: "bg-orange-500",
+        purple: "bg-purple-500",
+        special: "bg-blue-950"
+    }
+
     return (
         <div>
             <Helmet>
@@ -66,28 +89,34 @@ const Podcast = () => {
                     <>
                     {selectedPodcast && (
                         <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center h-full w-full">
-                        <div className="bg-white p-5 rounded-lg max-w-lg w-full text-left">
+                        <div className={` ${backgroundColors[podcast.pbg]} p-5 rounded-lg max-w-lg w-full text-left`}>
                             <button
                             onClick={handleCloseModal}
-                            className="mb-5 bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 cursor-pointer"
+                            className="mb-5 bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 hover:text-black cursor-pointer"
                             >
                             Close
                             </button>
+                            <h2 className="text-center underline ">Choose Your Platform!</h2>
                             <div
                             className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
-                            dangerouslySetInnerHTML={{ __html: selectedPodcast.purl }}
+                            >
+                              <button onClick={() => handlePlatform(platformData['youtube'])}>Youtube</button>
+                            </div>
+                            <div
+                            className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
+                            ><button onClick={() => handlePlatform(platformData['spotify'])}>Spotify Podcasts</button></div>
+                            <div
+                            className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
+                            ><button onClick={() => handlePlatform(platformData['applepodcast'])}>Apple Podcasts</button></div>
+                            <div
+                            className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
+                            dangerouslySetInnerHTML={{ __html: selectedPlatform}}
                             ></div>
-                            <h2 className={`border-2 border-black  flex bg-brown-200 text-l text-black justify-center w-full mb-2`}>
-                            {selectedPodcast.ptitle}
-                            </h2>
-                            <p className={`overflow-hidden overflow-wrap border-2 border-black flex bg-brown-200 text-l text-black  justify-center p-4 w-full`}>
-                            {selectedPodcast.pdescription}
-                            </p>
                         </div>
                         </div>
                     )}
                     <div key={podcast._id} className="flex flex-col p-2 w-full h-full ml-0 lg:ml-10 mr-0 lg:mr-3">
-                        <div className="flex flex-col h-full">
+                        <div className="flex flex-col h-full transition-transform duration-300 ease-in-out transform">
                         <p
                             onClick={() => handleListen(podcast)}
                             className={`flex text-2xl ${textColors[podcast.pbg]} font-comic w-full p-2 cursor-pointer font-bold underline`}

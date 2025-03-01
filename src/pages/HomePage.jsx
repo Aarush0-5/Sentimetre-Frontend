@@ -5,7 +5,6 @@ import axios from "axios";
 import images from "../Images.js";
 
 const Homepage = () => {
-    const currentYear = new Date().getFullYear();
     const [error, setError] = useState(null);
     const [podcasts, setPodcasts] = useState([]);
     const [currentImage, setCurrentImage]=useState(null);
@@ -20,7 +19,6 @@ const Homepage = () => {
             } else {
                 setError("Unexpected data format.");
             }
-            console.log(response.data)
         })
         .catch(error => {
             setError(error.message);
@@ -32,15 +30,11 @@ const Homepage = () => {
 
     useEffect(() => {
         const updateImage = () => {
-            const today = new Date().toISOString().split('T')[0];
-            console.log("Today's date:", today); 
-
+            const today = new Date().toISOString().split('T')[0]; 
             let latestImage = null;
             for (const schedule of images) {
-                console.log("Checking date:", schedule.date); 
                 if (today >= schedule.date) {
-                    latestImage = schedule.img;
-                    console.log("Updated latestImage to:", latestImage); 
+                    latestImage = schedule.img; 
                 } else {
                     break;
                 }
@@ -69,6 +63,7 @@ const Homepage = () => {
         purple: "text-purple-500",
         special: "text-blue-950"
     }
+    
 
     return (
         <div>
@@ -116,11 +111,11 @@ const Homepage = () => {
 
 
             <div className=" flex flex-col items-start justify-start w-full p-4 lg:pl-2">
-                {podcasts.slice(0, 5).map(podcast => (
+                {podcasts.slice(0, 5).reverse().map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
-                    <Link to={"/Podcast"} className={`${textColors[podcast.pbg]} underline font-bold font-comic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.ptitle} </Link>
-                    <p className={`${textColors[podcast.pbg]} w-full font-semibold font-comic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.pdescription}</p>
+                    <Link to={"/Podcast"} className={`${textColors[podcast.bg]} transition-transform duration-300 ease-in-out transform underline font-bold font-comic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.title} </Link>
+                    <p className={`${textColors[podcast.bg]} w-full font-semibold font-comic text-lg  sm:text-xl md:text-2xl lg:text-2xl`}>{podcast.description.slice(0,49)}...</p>
                     </div>
                 </div>
                 ))}
