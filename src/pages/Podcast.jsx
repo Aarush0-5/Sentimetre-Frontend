@@ -30,6 +30,7 @@ const Podcast = () => {
         .then(response => {
             if (response.data && Array.isArray(response.data.data)) {
                 setPodcasts(response.data.data);
+                console.log(response.data.data)
                 platformData = 
                     {
                         "youtube": `${response.data.data.urly}`,
