@@ -33,9 +33,9 @@ const Podcast = () => {
                 console.log(response.data.data)
                 platformData = 
                     {
-                        "youtube": `${response.data.data.urly}`,
-                        "spotify": `${response.data.data.urls}`,
-                        "applepodcast": `${response.data.data.urla}`,
+                        "youtube": `${response.data.data[0]['urly']}`,
+                        "spotify": `${response.data.data[0]['urls']}`,
+                        "applepodcast": `${response.data.data[0]['urla']}`,
                     }
                 console.log(platformData)
             } else {
