@@ -111,7 +111,7 @@ const Homepage = () => {
 
 
             <div className=" flex flex-col items-start justify-start w-full p-4 lg:pl-2">
-                {podcasts.slice(0, 5).reverse().map(podcast => (
+                {podcasts.slice().reverse().slice(0, 7).map(podcast => (
                 <div key={podcast._id} className="mb-2">
                     <div className="flex flex-col text-left items-center p-2">
                     <Link to={"/Podcast"} className={`${textColors[podcast.bg]} transition-transform duration-300 ease-in-out transform underline font-bold font-comic w-full  mb-1 text-xl sm:text-2xl md:text-3xl lg:text-2xl`}>{podcast.title} </Link>
