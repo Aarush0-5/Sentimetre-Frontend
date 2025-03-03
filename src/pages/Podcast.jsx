@@ -7,7 +7,6 @@ const Podcast = () => {
     const [podcasts, setPodcasts] = useState([]);
     const [search, setSearch] = useState('');
     const [selectedPodcast, setSelectedPodcast] = useState(null);
-    const [platformdata, setPlatformData] = useState({});
     const [selectedPlatform, setSelectedPlatform] = useState('');
 
     const handleListen = (podcast) => {
@@ -28,13 +27,7 @@ const Podcast = () => {
         axios.get("https://sentimetre-backend.onrender.com/auth/podcast")
         .then(response => {
             if (response.data && Array.isArray(response.data.data)) {
-                setPodcasts(response.data.data);
-                const platforms = {
-                    "youtube": response.data.data[0]['urly'],
-                    "spotify": response.data.data[0]['urls'],
-                    "applepodcast": response.data.data[0]['urla'],
-                };
-                setPlatformData(platforms);
+                setPodcasts(response.data.data)                 
             } else {
                 setError("Unexpected data format.");
             }
@@ -116,13 +109,13 @@ const Podcast = () => {
                         </button>
                         <h2 className="text-center text-xl lg:text-2xl mb-5 font-semibold underline">Choose Your Favourite Platform!</h2>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
-                            <button onClick={() => handlePlatform(platformdata["applepodcast"])}>Apple Podcasts</button>
+                            <button onClick={() => handlePlatform(selectedPodcast.urla)}>Apple Podcasts</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
-                            <button onClick={() => handlePlatform(platformdata["spotify"])}>Spotify Podcasts</button>
+                            <button onClick={() => handlePlatform(selectedPodcast.urls)}>Spotify Podcasts</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2">
-                            <button onClick={() => handlePlatform(platformdata["youtube"])}>YouTube</button>
+                            <button onClick={() => handlePlatform(selectedPodcast.urly)}>YouTube</button>
                         </div>
                         <div className="border-2 border-black flex bg-brown-200 text-l text-black justify-center w-full mb-2"
                             dangerouslySetInnerHTML={{ __html: selectedPlatform }}>
